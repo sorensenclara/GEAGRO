@@ -1,0 +1,16 @@
+{% extends 'extras/layouts/vertical/base_vertical.html' %}
+{% load static %}
+{% block title %} Icon Sidebar {% endblock title %}
+
+{% block body %}
+    <body data-sidebar="dark" data-keep-enlarged="true" class="vertical-collpsed">
+{% endblock body %}
+
+{% block content %}         
+    {% block pagetitle %}
+        {% include "partials/page-title.html" with pagetitle="Lexa" subtitle="Vertical" title="Icon Sidebar"%}
+    {% endblock pagetitle %}   
+    
+    
+{% endblock content %}
+      

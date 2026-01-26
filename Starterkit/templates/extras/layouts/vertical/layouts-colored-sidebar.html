@@ -1,0 +1,14 @@
+{% extends 'extras/layouts/vertical/base_vertical.html' %}
+{% load static %}
+{% block title %} Colored Sidebar {% endblock title %}
+
+{% block body %}
+    <body data-sidebar="colored">
+{% endblock body %}
+
+{% block content %}         
+    {% block pagetitle %}
+    {% include "partials/page-title.html" with pagetitle="Lexa" subtitle="Vertical" title="Colored Layout"%}
+    {% endblock pagetitle %}    
+                     
+{% endblock content %}

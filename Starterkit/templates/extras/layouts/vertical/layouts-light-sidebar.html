@@ -1,0 +1,18 @@
+{% extends 'extras/layouts/vertical/base_vertical.html' %}
+{% load static %}
+{% block title %} Light Sidebar {% endblock title %}
+
+
+{% block body %}
+    <body data-topbar="dark">
+{% endblock body %}
+
+
+{% block content %}         
+    {% block pagetitle %}
+        {% include "partials/page-title.html" with pagetitle="Lexa" subtitle="Vertical" title="Light Sidebar"%}
+    {% endblock pagetitle %}     
+    
+    
+{% endblock content %}
+      

@@ -1,0 +1,69 @@
+/* SIDEBAR DARK OVERRIDE GEAGRO */
+
+/* iguala la especificidad del tema */
+:root [data-sidebar="dark"],
+[data-bs-theme="light"] [data-sidebar="dark"] {
+  --bs-sidebar-dark-bg: #3F2642;
+
+  --bs-sidebar-dark-menu-item-color: #d6c9d9;
+  --bs-sidebar-dark-menu-sub-item-color: #d6c9d9;
+  --bs-sidebar-dark-menu-item-icon-color: #d6c9d9;
+  --bs-sidebar-dark-menu-item-hover-color: #ffffff;
+  --bs-sidebar-dark-menu-item-active-color: #ffffff;
+  --bs-sidebar-dark-menu-item-active-bg: #2c1830;
+}
+
+/* por si el atributo está en body (muchas pantallas lo usan así) */
+body[data-sidebar="dark"]{
+  --bs-sidebar-dark-bg: #3F2642;
+  --bs-sidebar-dark-menu-item-color: #d6c9d9;
+  --bs-sidebar-dark-menu-sub-item-color: #d6c9d9;
+  --bs-sidebar-dark-menu-item-icon-color: #d6c9d9;
+  --bs-sidebar-dark-menu-item-hover-color: #ffffff;
+  --bs-sidebar-dark-menu-item-active-color: #ffffff;
+  --bs-sidebar-dark-menu-item-active-bg: #2c1830;
+}
+
+/* ==========================
+   COLOR PRIMARY OVERRIDE
+========================== */
+
+:root,
+[data-bs-theme="light"] {
+  --bs-primary-rgb: 107, 63, 110;
+}
+
+
+/* ===== GEAGRO THEME OVERRIDES ===== */
+:root,
+[data-bs-theme="light"],
+[data-bs-theme="dark"] {
+  --bs-primary: #6b3f6e;
+  --bs-primary-rgb: 107, 63, 110;
+
+  --bs-info: #138037;
+  --bs-info-rgb: 19, 128, 55;
+
+  --bs-light: #E0E0E0;
+  --bs-light-rgb: 224, 224, 224;
+}
+
+
+/* ===== GEAGRO ICON SIDEBARS ===== */
+.menu-icon-img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ==========================
+   AIRBNB-LIKe Filter Bar
+========================== */
+.geagro-filterbar .form-select{
+  border-radius: 14px;
+  height: 46px;
+}
+.geagro-filterbar .card-body{
+  padding: 14px;
+}

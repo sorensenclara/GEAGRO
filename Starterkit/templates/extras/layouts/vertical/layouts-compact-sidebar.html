@@ -1,0 +1,14 @@
+{% extends 'extras/layouts/vertical/base_vertical.html' %}
+{% load static %}
+{% block title %} Compact Sidebar {% endblock title %}
+
+{% block body %}
+    <body data-sidebar="dark" data-sidebar-size="small">
+{% endblock body %}
+
+{% block content %}         
+    {% block pagetitle %}
+        {% include "partials/page-title.html" with pagetitle="Lexa" subtitle="Vertical" title="Compact Layout"%}
+    {% endblock pagetitle %}       
+                   
+{% endblock content %}

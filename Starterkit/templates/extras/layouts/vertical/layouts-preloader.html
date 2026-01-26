@@ -1,0 +1,31 @@
+{% extends 'extras/layouts/vertical/base_vertical.html' %}
+{% load static %}
+{% block title %} Preloader {% endblock title %}
+
+{% block body %}
+    <body data-sidebar="dark">
+
+         <!-- Loader -->
+         <div id="preloader">
+            <div id="status">
+                <div class="spinner-chase">
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                </div>
+            </div>
+        </div>
+
+{% endblock body %}
+
+{% block content %}         
+    {% block pagetitle %}
+        {% include "partials/page-title.html" with pagetitle="Lexa" subtitle="Vertical" title="Preloader"%}
+    {% endblock pagetitle %} 
+    
+   
+{% endblock content %}
+      

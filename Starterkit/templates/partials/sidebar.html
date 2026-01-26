@@ -1,0 +1,249 @@
+{% load static %}
+{% block sidebar %}
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+                <li class="menu-title">Main</li>
+
+                <li>
+                    <a href="{% url 'dashboard:dashboard' %}" class="waves-effect">
+                        <i class="mdi mdi-view-dashboard"></i>
+                        <span class="badge rounded-pill bg-primary float-end">2</span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class=" waves-effect">
+                        <i class="mdi mdi-calendar-check"></i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-email-outline"></i>
+                        <span>Email</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#">Inbox</a></li>
+                        <li><a href="#">Email Read</a></li>
+                        <li><a href="#">Email Compose</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class=" waves-effect">
+                        <i class="mdi mdi-chat-processing-outline"></i>
+                        <span class="badge rounded-pill bg-danger float-end">Hot</span>
+                        <span>Chat</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class=" waves-effect">
+                        <i class="mdi mdi-billboard"></i>
+                        <span class="badge rounded-pill bg-success float-end">New</span>
+                        <span>Kanban Board</span>
+                    </a>
+                </li>
+
+                <li class="menu-title">Components</li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-buffer"></i>
+                        <span>UI Elements</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="#">Alerts</a></li>
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Badge</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Carousel</a></li>
+                            <li><a href="#">Dropdowns</a></li>
+                            <li><a href="#">Utilities<span class="badge rounded-pill bg-success float-end">New</span></a></li>
+                            <li><a href="#">Grid</a></li>
+                            <li><a href="#">Images</a></li>
+                            <li><a href="#">Lightbox</a></li>
+                            <li><a href="#">Modals</a></li>
+                            <li><a href="#">Colors<span class="badge rounded-pill bg-warning float-end">New</span></a></li>
+                            <li><a href="#">Offcanvas</a></li>
+                            <li><a href="#">Pagination</a></li>
+                            <li><a href="#">Popover &amp; Tooltips</a></li>
+                            <li><a href="#">Range Slider</a></li>
+                            <li><a href="#">Session Timeout</a></li>
+                            <li><a href="#">Progress Bars</a></li>
+                            <li><a href="#">Sweet-Alert</a></li>
+                            <li><a href="#">Tabs &amp; Accordions</a></li>
+                            <li><a href="#">Typography</a></li>
+                            <li><a href="#">Video</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="mdi mdi-clipboard-outline"></i>
+                        <span class="badge rounded-pill bg-success float-end">6</span>
+                        <span>Forms</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#">Form Elements</a></li>
+                        <li><a href="#">Form Validation</a></li>
+                        <li><a href="#">Form Advanced</a></li>
+                        <li><a href="#">Form Editors</a></li>
+                        <li><a href="#">Form File Upload</a></li>
+                        <li><a href="#">Form Xeditable</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-chart-line"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#">Morris Chart</a></li>
+                        <li><a href="#">Chartist Chart</a></li>
+                        <li><a href="#">Chartjs Chart</a></li>
+                        <li><a href="#">Flot Chart</a></li>
+                        <li><a href="#">C3 Chart</a></li>
+                        <li><a href="#">Jquery Knob Chart</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-format-list-bulleted-type"></i>
+                        <span>Tables</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#">Basic Tables</a></li>
+                        <li><a href="#">Data Table</a></li>
+                        <li><a href="#">Responsive Table</a></li>
+                        <li><a href="#">Editable Table</a></li>
+                    </ul>
+                </li>
+
+               
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-album"></i>
+                        <span>Icons</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#">Material Design</a></li>
+                        <li><a href="#">Ion Icons</a></li>
+                        <li><a href="#">Font Awesome</a></li>
+                        <li><a href="#">Themify Icons</a></li>
+                        <li><a href="#">Dripicons</a></li>
+                        <li><a href="#">Typicons Icons</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <span class="badge rounded-pill bg-danger float-end">2</span>
+                        <i class="mdi mdi-google-maps"></i>
+                        <span>Maps</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#"> Google Map</a></li>
+                        <li><a href="#"> Vector Map</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-title">Extras</li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-responsive"></i>
+                        <span> Layouts </span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="true">
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow">Vertical</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{% url 'extras:layouts.vertical.light_sidebar' %}">Light Sidebar</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.compact_sidebar' %}">Compact Sidebar</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.icon_sidebar' %}">Icon Sidebar</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.boxed' %}">Boxed Layout</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.preloader' %}">Preloader</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.colored_sidebar' %}">Colored Sidebar</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow">Horizontal</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{% url 'extras:layouts.horizontal.horizontal' %}">Horizontal</a></li>
+                                <li><a href="{% url 'extras:layouts.horizontal.hori_topbar_dark' %}">Topbar Dark</a></li>
+                                <li><a href="{% url 'extras:layouts.horizontal.preloader' %}">Preloader</a></li>
+                                <li><a href="{% url 'extras:layouts.horizontal.hori_boxed_width' %}">Boxed Layout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-account-box"></i>
+                        <span> Authentication </span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'extras:authentication.pages_login' %}">Login</a></li>
+                        <li><a href="{% url 'extras:authentication.register' %}">Register</a></li>
+                        <li><a href="{% url 'extras:authentication.recover_password' %}">Recover Password</a></li>
+                        <li><a href="{% url 'extras:authentication.lock_screen' %}">Lock Screen</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-text-box-multiple-outline"></i>
+                        <span> Extra Pages </span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="#">Timeline</a></li>
+                        <li><a href="#">Invoice</a></li>
+                        <li><a href="#">Directory</a></li>
+                        <li><a href="{% url 'extras:extra-pages.blank_page' %}">Blank Page</a></li>
+                        <li><a href="{% url 'extras:extra-pages.error404' %}">Error 404</a></li>
+                        <li><a href="{% url 'extras:extra-pages.error500' %}">Error 500</a></li>
+                    </ul>
+                </li>
+
+                
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-share-variant"></i>
+                        <span>Multi Level</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="true">
+                        <li><a href="javascript: void(0);">Level 1.1</a></li>
+                        <li><a href="javascript: void(0);" class="has-arrow">Level 1.2</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="javascript: void(0);">Level 2.1</a></li>
+                                <li><a href="javascript: void(0);">Level 2.2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->
+
+{% endblock sidebar %}

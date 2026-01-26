@@ -1,0 +1,250 @@
+{% load static %}
+{% block sidebar %}
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+                <li class="menu-title">Main</li>
+
+                <li>
+                    <a href="{% url 'dashboard:dashboard' %}" class="waves-effect">
+                        <img src="{% static 'images/icon/dashboard.svg' %}" class="menu-icon-img" />
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'dashboard:kanbanboard' %}" class=" waves-effect">
+                        <i class="mdi mdi-billboard"></i>
+                        <span class="badge rounded-pill bg-success float-end">New</span>
+                        <span>Plan Tecnico</span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="{% url 'dashboard:calendar' %}" class=" waves-effect">
+                        <img src="{% static 'images/icon/calendar.svg' %}" class="menu-icon-img" />
+                        <span>Calendario</span>
+                    </a>
+                </li>
+                
+
+                <li class="menu-title">No utilizados</li>
+                
+                <li>
+                    <a href="{% url 'dashboard:chat' %}" class=" waves-effect">
+                        <i class="mdi mdi-chat-processing-outline"></i>
+                        <span class="badge rounded-pill bg-danger float-end">Hot</span>
+                        <span>Chat</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-email-outline"></i>
+                        <span>Email</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'dashboard:email.email_inbox' %}">Inbox</a></li>
+                        <li><a href="{% url 'dashboard:email.email_read' %}">Email Read</a></li>
+                        <li><a href="{% url 'dashboard:email.email_compose' %}">Email Compose</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-title">Components</li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-buffer"></i>
+                        <span>UI Elements</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="{% url 'components:ui-elements.alerts' %}">Alerts</a></li>
+                            <li><a href="{% url 'components:ui-elements.buttons' %}">Buttons</a></li>
+                            <li><a href="{% url 'components:ui-elements.badge' %}">Badge</a></li>
+                            <li><a href="{% url 'components:ui-elements.cards' %}">Cards</a></li>
+                            <li><a href="{% url 'components:ui-elements.carousel' %}">Carousel</a></li>
+                            <li><a href="{% url 'components:ui-elements.dropdowns' %}">Dropdowns</a></li>
+                            <li><a href="{% url 'components:ui-elements.utilities' %}">Utilities<span class="badge rounded-pill bg-success float-end">New</span></a></li>
+                            <li><a href="{% url 'components:ui-elements.grid' %}">Grid</a></li>
+                            <li><a href="{% url 'components:ui-elements.images' %}">Images</a></li>
+                            <li><a href="{% url 'components:ui-elements.lightbox' %}">Lightbox</a></li>
+                            <li><a href="{% url 'components:ui-elements.modals' %}">Modals</a></li>
+                            <li><a href="{% url 'components:ui-elements.colors' %}">Colors<span class="badge rounded-pill bg-warning float-end">New</span></a></li>
+                            <li><a href="{% url 'components:ui-elements.offcanvas' %}">Offcanvas</a></li>
+                            <li><a href="{% url 'components:ui-elements.pagination' %}">Pagination</a></li>
+                            <li><a href="{% url 'components:ui-elements.popover_tooltips' %}">Popover &amp; Tooltips</a></li>
+                            <li><a href="{% url 'components:ui-elements.rangeslider' %}">Range Slider</a></li>
+                            <li><a href="{% url 'components:ui-elements.session_timeout' %}">Session Timeout</a></li>
+                            <li><a href="{% url 'components:ui-elements.progressbars' %}">Progress Bars</a></li>
+                            <li><a href="{% url 'components:ui-elements.sweet_alert' %}">Sweet-Alert</a></li>
+                            <li><a href="{% url 'components:ui-elements.tabs_accordions' %}">Tabs &amp; Accordions</a></li>
+                            <li><a href="{% url 'components:ui-elements.typography' %}">Typography</a></li>
+                            <li><a href="{% url 'components:ui-elements.video' %}">Video</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <i class="mdi mdi-clipboard-outline"></i>
+                        <span class="badge rounded-pill bg-success float-end">6</span>
+                        <span>Forms</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'components:forms.elements' %}">Form Elements</a></li>
+                        <li><a href="{% url 'components:forms.validation' %}">Form Validation</a></li>
+                        <li><a href="{% url 'components:forms.advanced' %}">Form Advanced</a></li>
+                        <li><a href="{% url 'components:forms.editors' %}">Form Editors</a></li>
+                        <li><a href="{% url 'components:forms.uploads' %}">Form File Upload</a></li>
+                        <li><a href="{% url 'components:forms.xeditable' %}">Form Xeditable</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-chart-line"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'components:charts.morris' %}">Morris Chart</a></li>
+                        <li><a href="{% url 'components:charts.chartist' %}">Chartist Chart</a></li>
+                        <li><a href="{% url 'components:charts.chartjs' %}">Chartjs Chart</a></li>
+                        <li><a href="{% url 'components:charts.flot' %}">Flot Chart</a></li>
+                        <li><a href="{% url 'components:charts.c3' %}">C3 Chart</a></li>
+                        <li><a href="{% url 'components:charts.other' %}">Jquery Knob Chart</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-format-list-bulleted-type"></i>
+                        <span>Tables</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'components:tables.basic' %}">Basic Tables</a></li>
+                        <li><a href="{% url 'components:tables.datatable' %}">Data Table</a></li>
+                        <li><a href="{% url 'components:tables.responsive' %}">Responsive Table</a></li>
+                        <li><a href="{% url 'components:tables.editable' %}">Editable Table</a></li>
+                    </ul>
+                </li>     
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-album"></i>
+                        <span>Icons</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'components:icons.material' %}">Material Design</a></li>
+                        <li><a href="{% url 'components:icons.ion' %}">Ion Icons</a></li>
+                        <li><a href="{% url 'components:icons.fontawesome' %}">Font Awesome</a></li>
+                        <li><a href="{% url 'components:icons.themify' %}">Themify Icons</a></li>
+                        <li><a href="{% url 'components:icons.dripicons' %}">Dripicons</a></li>
+                        <li><a href="{% url 'components:icons.typicons' %}">Typicons Icons</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="waves-effect">
+                        <span class="badge rounded-pill bg-danger float-end">2</span>
+                        <i class="mdi mdi-google-maps"></i>
+                        <span>Maps</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'components:maps.google' %}"> Google Map</a></li>
+                        <li><a href="{% url 'components:maps.vector' %}"> Vector Map</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-title">Extras</li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-responsive"></i>
+                        <span> Layouts </span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="true">
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow">Vertical</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{% url 'extras:layouts.vertical.light_sidebar' %}">Light Sidebar</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.compact_sidebar' %}">Compact Sidebar</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.icon_sidebar' %}">Icon Sidebar</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.boxed' %}">Boxed Layout</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.preloader' %}">Preloader</a></li>
+                                <li><a href="{% url 'extras:layouts.vertical.colored_sidebar' %}">Colored Sidebar</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow">Horizontal</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{% url 'extras:layouts.horizontal.horizontal' %}">Horizontal</a></li>
+                                <li><a href="{% url 'extras:layouts.horizontal.hori_topbar_dark' %}">Topbar Dark</a></li>
+                                <li><a href="{% url 'extras:layouts.horizontal.preloader' %}">Preloader</a></li>
+                                <li><a href="{% url 'extras:layouts.horizontal.hori_boxed_width' %}">Boxed Layout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-account-box"></i>
+                        <span> Authentication </span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'extras:authentication.pages_login' %}">Login</a></li>
+                        <li><a href="{% url 'extras:authentication.register' %}">Register</a></li>
+                        <li><a href="{% url 'extras:authentication.recover_password' %}">Recover Password</a></li>
+                        <li><a href="{% url 'extras:authentication.lock_screen' %}">Lock Screen</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-text-box-multiple-outline"></i>
+                        <span> Extra Pages </span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{% url 'extras:extra-pages.timeline' %}">Timeline</a></li>
+                        <li><a href="{% url 'extras:extra-pages.invoice' %}">Invoice</a></li>
+                        <li><a href="{% url 'extras:extra-pages.directory' %}">Directory</a></li>
+                        <li><a href="{% url 'extras:extra-pages.blank_page' %}">Blank Page</a></li>
+                        <li><a href="{% url 'extras:extra-pages.error404' %}">Error 404</a></li>
+                        <li><a href="{% url 'extras:extra-pages.error500' %}">Error 500</a></li>
+                    </ul>
+                </li>
+
+                
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="mdi mdi-share-variant"></i>
+                        <span>Multi Level</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="true">
+                        <li><a href="javascript: void(0);">Level 1.1</a></li>
+                        <li><a href="javascript: void(0);" class="has-arrow">Level 1.2</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="javascript: void(0);">Level 2.1</a></li>
+                                <li><a href="javascript: void(0);">Level 2.2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->
+
+{% endblock sidebar %}

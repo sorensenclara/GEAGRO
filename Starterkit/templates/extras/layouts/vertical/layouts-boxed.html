@@ -1,0 +1,15 @@
+{% extends 'extras/layouts/vertical/base_vertical.html' %}
+{% load static %}
+{% block title %} Boxed Sidebar {% endblock title %}
+
+{% block body %}
+    <body data-sidebar="dark" data-keep-enlarged="true" class="vertical-collpsed" data-layout-size="boxed">
+{% endblock body %}
+
+{% block content %}         
+    {% block pagetitle %}
+    {% include "partials/page-title.html" with pagetitle="Lexa" subtitle="Vertical" title="Boxed Layout"%}
+    {% endblock pagetitle %}   
+                       
+{% endblock content %}
+      
