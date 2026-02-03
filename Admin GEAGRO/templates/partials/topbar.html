@@ -17,10 +17,10 @@
 
                 <a href="{% url 'dashboard:dashboard' %}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{% static 'images/logo-sm.png' %}" alt="" height="32">
+                        <img src="{% static 'images/logo-sm.svg' %}" alt="" height="32">
                     </span>
                     <span class="logo-lg">
-                        <img src="{% static 'images/logo-geagro-light.png' %}" alt="" height="28">
+                        <img src="{% static 'images/logo-geagro-light.svg' %}" alt="" height="28">
                     </span>
                 </a>
             </div>
@@ -36,7 +36,7 @@
                         </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Acciones</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                         <div class="dropdown-divider"></div>
@@ -81,33 +81,13 @@
 
             <div class="dropdown d-none d-md-block ms-2">
                 <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="me-2" src="{% static 'images/flags/us_flag.jpg' %}" alt="Header Language" height="16"> English <span class="mdi mdi-chevron-down"></span>
+                    <img class="me-2" src="{% static 'images/flags/arg_flag.jpg' %}" alt="Header Language" height="16"> Español <span class="mdi mdi-chevron-down"></span>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{% static 'images/flags/germany_flag.jpg' %}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> German </span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{% static 'images/flags/italy_flag.jpg' %}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Italian </span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{% static 'images/flags/french_flag.jpg' %}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> French </span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{% static 'images/flags/spain_flag.jpg' %}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Spanish </span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <img src="{% static 'images/flags/russia_flag.jpg' %}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Russian </span>
+                        <img src="{% static 'images/flags/us_flag.jpg' %}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Inglés </span>
                     </a>
                 </div>
             </div>
@@ -122,14 +102,14 @@
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="ti-bell"></i>
-                    <span class="badge text-bg-danger rounded-pill">3</span>
+                    <span class="badge text-bg-danger rounded-pill">2</span>
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
                     aria-labelledby="page-header-notifications-dropdown">
                     <div class="p-3">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h5 class="m-0"> Notifications (258) </h5>
+                                <h5 class="m-0"> Notificaciones (2) </h5>
                             </div>
                         </div>
                     </div>
@@ -139,14 +119,14 @@
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar-xs">
                                     <span class="avatar-title border-success rounded-circle ">
-                                        <i class="mdi mdi-cart-outline"></i>
+                                        <i class="mdi mdi-billboard"></i>
                                     </span>
                                 </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h6 class="mb-1">Your order is placed</h6>
+                                    <h6 class="mb-1">Nuevo plan de acción</h6>
                                     <div class="text-muted">
-                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                        <p class="mb-1">Campaña 2026</p>
                                     </div>
                                 </div>
                             </div>
@@ -157,72 +137,19 @@
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar-xs">
                                     <span class="avatar-title border-warning rounded-circle ">
-                                        <i class="mdi mdi-message"></i>
+                                        <i class="mdi mdi-alert-circle-outline"></i>
                                     </span>
                                 </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h6 class="mb-1">New Message received</h6>
+                                    <h6 class="mb-1">Alerta por lluvias</h6>
                                     <div class="text-muted">
-                                        <p class="mb-1">You have 87 unread messages</p>
+                                        <p class="mb-1">Alertas en el cuertal norte</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
-
-                        <a href="javascript:void(0);" class="text-reset notification-item">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0 me-3">
-                                    <div class="avatar-xs">
-                                    <span class="avatar-title border-info rounded-circle ">
-                                        <i class="mdi mdi-glass-cocktail"></i>
-                                    </span>
-                                </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1">Your item is shipped</h6>
-                                    <div class="text-muted">
-                                        <p class="mb-1">It is a long established fact that a reader will</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="javascript:void(0);" class="text-reset notification-item">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0 me-3">
-                                    <div class="avatar-xs">
-                                    <span class="avatar-title border-primary rounded-circle ">
-                                        <i class="mdi mdi-cart-outline"></i>
-                                    </span>
-                                </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1">Your order is placed</h6>
-                                    <div class="text-muted">
-                                        <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="javascript:void(0);" class="text-reset notification-item">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0 me-3">
-                                    <div class="avatar-xs">
-                                    <span class="avatar-title border-warning rounded-circle ">
-                                        <i class="mdi mdi-message"></i>
-                                    </span>
-                                </div>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <h6 class="mb-1">New Message received</h6>
-                                    <div class="text-muted">
-                                        <p class="mb-1">You have 87 unread messages</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        
                     </div>
                     <div class="p-2 border-top">
                         <a class="btn btn-sm btn-link font-size-14 w-100 text-center" href="javascript:void(0)">
@@ -250,24 +177,19 @@
                     {% if user.is_authenticated %}
                         <a class="dropdown-item" href="{% url 'account_change_password' %}">
                             <i class="mdi mdi-key text-muted fs-16 align-middle me-1"></i> 
-                            <span class="align-middle" data-key="t-change-password">Change Password</span>
+                            <span class="align-middle" data-key="t-change-password">Cambiar la Contraseña</span>
                         </a>
                         <a class="dropdown-item text-danger" href="{% url 'account_logout' %}">
-                            <i class="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger"></i> Logout</a>
+                            <i class="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger"></i> Cerrar Sesión</a>
                     {% else %}
                         <a class="dropdown-item" href="{% url 'account_login' %}">
                             <i class="mdi mdi-key text-muted fs-16 align-middle me-1"></i> 
-                            <span class="align-middle" data-key="t-login">Log In</span>
+                            <span class="align-middle" data-key="t-login">Iniciar Sesión</span>
                         </a>
                     {% endif %}
                 </div>
             </div>
             
-            <div class="dropdown d-inline-block">
-                <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
-                    <i class="mdi mdi-spin mdi-cog"></i>
-                </button>
-            </div>
         </div>
     </div>
 </header>

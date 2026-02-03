@@ -51,8 +51,16 @@ body[data-sidebar="dark"]{
 
 /* ===== GEAGRO ICON SIDEBARS ===== */
 .menu-icon-img{
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ===== GEAGRO ICON DASHBOARD ===== */
+.dashboard-icon-img{
+  width: 32px;
+  height: 32px;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -66,4 +74,256 @@ body[data-sidebar="dark"]{
 }
 .geagro-filterbar .card-body{
   padding: 14px;
+}
+/* =========================================================
+   GEAGRO KPI — sistema único (compacto + ritmo real)
+   (versión corregida para que NO quede gigante y sin pisarse)
+   ========================================================= */
+
+:root{
+  --geagro-alert-soft:#906693;
+  --geagro-alert-urgent:#cf4e4e;
+  --geagro-status-ok:#5a994c;
+
+  --kpi-radius: 22px;
+  --kpi-border: #eef0f2;
+
+  /* ↓ más compacto */
+  --kpi-pad: 18px;
+
+  --kpi-title: 18px;
+  --kpi-icon: 24px;
+
+  /* ↓ evita “hero” */
+  --kpi-main: clamp(26px, 2vw, 34px);
+  --kpi-h4: clamp(18px, 1.6vw, 24px);
+  --kpi-meta: 14px;
+}
+
+/* Card base */
+.geagro-kpi .card{
+  border-radius: var(--kpi-radius);
+  border: 1px solid var(--kpi-border);
+  overflow: hidden;
+}
+
+.geagro-kpi .card-body{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  padding: var(--kpi-pad);
+}
+
+/* Alto consistente SOLO en desktop (más bajo) */
+@media (min-width: 1200px){
+  .geagro-kpi .card{ height: 310px; }
+}
+
+/* Header */
+.geagro-kpi .geagro-card-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.geagro-kpi .card-title{
+  font-size: var(--kpi-title);
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+/* (Opcional) evita que “Estado del viñedo” rompa a 2 líneas en desktop */
+@media (min-width: 1200px){
+  .geagro-kpi .card-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.geagro-kpi .geagro-card-icon{
+  font-size: var(--kpi-icon);
+  line-height: 1;
+  opacity: .9;
+}
+
+/* Main values */
+.geagro-kpi .geagro-kpi-value{
+  font-size: var(--kpi-main);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 4px 0 10px;
+}
+
+.geagro-kpi .geagro-kpi-h4{
+  font-size: var(--kpi-h4);
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 4px 0 10px;
+}
+
+/* Meta */
+.geagro-kpi .geagro-kpi-meta{
+  font-size: var(--kpi-meta);
+  line-height: 1.45;
+  color:#5b6472;
+  margin: 0;
+}
+
+/* Content block: mantiene ritmo sin crear “vacío gigante” */
+.geagro-kpi .geagro-kpi-content{
+  margin-top: 2px;
+  min-height: 72px; /* antes 84 */
+}
+
+/* Limitar texto largo */
+.geagro-kpi .geagro-kpi-clamp{
+  display:-webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+}
+
+/* Footer */
+.geagro-kpi .geagro-card-footer{
+  margin-top:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+}
+
+.geagro-kpi .geagro-card-footer a{
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration:none;
+}
+
+/* Variantes */
+.geagro-card-status,
+.geagro-card-action{
+  background:#fff;
+}
+
+/* ALERTAS */
+.geagro-card-alert{
+  border-color: var(--geagro-alert-soft);
+  background: var(--geagro-alert-soft);
+  color:#fff;
+}
+
+.geagro-card-alert .badge{
+  background: var(--geagro-alert-urgent);
+  color:#fff;
+}
+
+/* Lista alertas (↓ un poco menos grande) */
+.geagro-alert-list{
+  list-style:none;
+  padding:0;
+  margin: 0;
+}
+
+.geagro-alert-list li{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-size: 16px; /* antes 18 */
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.geagro-alert-list i{
+  font-size: 18px; /* antes 20 */
+  color:#fff;
+  opacity: .95;
+  flex-shrink:0;
+}
+
+/* WEATHER visual */
+.geagro-card-weatherVisual{
+  border-color: var(--kpi-border);
+  background: linear-gradient(180deg, #f3f8ff 0%, #fbfdff 100%);
+}
+
+.geagro-weather-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.geagro-weather-sub{
+  font-size: 14px; /* antes 15 */
+  color:#6b7280;
+  margin-top: 2px;
+}
+
+/* clave: icono arriba y estable */
+.geagro-weather-icon{
+  width: 48px;   /* antes 56 */
+  height: 48px;  /* antes 56 */
+  object-fit: contain;
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+/* temp (igual kpi-value, pero compacto) */
+.geagro-weather-temp{
+  font-size: var(--kpi-main);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 4px 0 10px;
+  color:#111827;
+}
+
+.geagro-weather-minmax{
+  font-size: 14px; /* antes 16 */
+  color:#4b5563;
+  margin: 0;
+}
+
+.geagro-weather-minmax .dot{
+  margin: 0 6px;
+  opacity: .7;
+}
+
+.geagro-weather-metrics{
+  display:flex;
+  gap: 14px;
+  margin-top: 10px;
+  color:#374151;
+}
+
+.geagro-weather-metrics .metric{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  font-size: 14px; /* antes 15 */
+}
+
+.geagro-weather-metrics i{
+  font-size: 18px;
+  color:#6b3f6e;
+}
+
+/* chips ↓ más chicos (eran los que inflaban) */
+.geagro-weather-chips{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.geagro-weather-chips .chip{
+  background:#e5e7eb;
+  color:#111827;
+  padding: 4px 10px; /* antes 6 12 */
+  border-radius: 999px;
+  font-size: 13px;   /* antes 14 */
+  font-weight: 700;  /* antes 800 */
 }

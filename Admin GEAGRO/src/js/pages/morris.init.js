@@ -197,9 +197,8 @@ function ChartColorChange(chartupdate, chartId) {
             var donutChartColors = getChartColorsArray("morris-donut-example");
             if (donutChartColors) {
             var $donutData = [
-                {label: "Download Sales", value: 12},
-                {label: "In-Store Sales", value: 30},
-                {label: "Mail-Order Sales", value: 20}
+                    { label: "Costos productivos", value: 62 },
+                    { label: "Margen estimado", value: 38 }
             ];
             this.createDonutChart('morris-donut-example', $donutData, donutChartColors);
             }
