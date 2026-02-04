@@ -1,5 +1,5 @@
 /*
-Template Name: Lexa - Admin & Dashboard Template
+Template Name: GEAGRO - Software de Gestión de Viñedos
 Author: Themesbrand
 Website: https://themesbrand.com/
 Contact: themesbrand@gmail.com
@@ -145,12 +145,15 @@ function ChartColorChangeSparkLine(series, chartupdate, chartId) {
         var donutEXChartColors = getChartColorsArray("morris-donut-example");
         if (donutEXChartColors) {
         var $donutData = [
-            {label: "Download Sales", value: 12},
-            {label: "In-Store Sales", value: 30},
-            {label: "Mail-Order Sales", value: 20}
+            { label: "Costos productivos", value: 62 },
+            { label: "Margen estimado", value: 38 }
         ];
+        if (donutEXChartColors.length < 2) {
+            donutEXChartColors = [donutEXChartColors[0], donutEXChartColors[0]];
+        }
+
         this.createDonutChart('morris-donut-example', $donutData, donutEXChartColors);
-    }
+        }
 
         var barStackedChartColors = getChartColorsArray("morris-bar-stacked");
         if (barStackedChartColors) {

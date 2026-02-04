@@ -1,5 +1,5 @@
 /*
-Template Name: lexa - Admin & Dashboard Template
+Template Name: GEAGRO - Software de Gestión de Viñedos
 Author: Themesbrand
 Website: https://themesbrand.com/
 Contact: themesbrand@gmail.com

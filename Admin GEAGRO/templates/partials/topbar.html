@@ -48,13 +48,90 @@
 
         <div class="d-flex">
 
-            <!-- App Search-->
-            <form class="app-search d-none d-lg-block">
-                <div class="position-relative">
-                    <input type="text" class="form-control" placeholder="Search...">
-                    <span class="fa fa-search"></span>
+            <!-- Filtro tipo Airbnb -->
+            <div class="geagro-filterbar d-none d-lg-block">
+                <div class="dropdown">
+                    <button
+                    class="geagro-filterbar-btn"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    aria-expanded="false"
+                    id="geagroFilterDropdown"
+                    >
+                    <span class="seg">
+                        <span class="lbl">Campaña</span>
+                        <span class="val" id="valCampania">2025/26</span>
+                    </span>
+                    <span class="sep"></span>
+                    <span class="seg">
+                        <span class="lbl">Viñedo</span>
+                        <span class="val" id="valVinedo">Todos</span>
+                    </span>
+                    <span class="sep"></span>
+                    <span class="seg">
+                        <span class="lbl">Cuartel</span>
+                        <span class="val" id="valCuartel">—</span>
+                    </span>
+
+                    <span class="geagro-filterbar-icon">
+                        <i class="mdi mdi-magnify"></i>
+                    </span>
+                    </button>
+
+                    <div class="dropdown-menu geagro-filterbar-menu p-3" aria-labelledby="geagroFilterDropdown">
+                    <form id="geagroFiltersForm" class="geagro-filterbar-form" method="get" action="">
+                        <div class="row g-3">
+                        <!-- Campaña -->
+                        <div class="col-12">
+                            <label class="form-label mb-1">Campaña</label>
+                            <select class="form-select" name="campania" id="filterCampania">
+                            <option value="2023/24">2023/24</option>
+                            <option value="2024/25">2024/25</option>
+                            <option value="2025/26" selected>2025/26</option>
+                            </select>
+                        </div>
+
+                        <!-- Viñedo -->
+                        <div class="col-12">
+                            <label class="form-label mb-1">Viñedo</label>
+                            <select class="form-select" name="vinedo" id="filterVinedo">
+                            <option value="" selected>Todos</option>
+                            <option value="paciencia">Paciencia</option>
+                            <option value="don-mario">Don Mario</option>
+                            </select>
+                        </div>
+
+                        <!-- Cuartel / Lote -->
+                        <div class="col-12">
+                            <label class="form-label mb-1">Lote / Cuartel</label>
+                            <select class="form-select" name="cuartel" id="filterCuartel" disabled>
+                            <option value="" selected>—</option>
+                            </select>
+                            <div class="form-text">Se habilita al elegir un viñedo.</div>
+                        </div>
+
+                        <!-- Acciones -->
+                        <div class="col-12 d-flex gap-2 justify-content-end pt-2">
+                            <button type="button" class="btn btn-light" id="btnClearFilters">
+                            Limpiar
+                            </button>
+                            <button type="submit" class="btn btn-primary" id="btnApplyFilters">
+                            Aplicar filtros
+                            </button>
+                        </div>
+                        </div>
+                    </form>
+                    </div>
                 </div>
-            </form>
+            </div>
+
+            <!-- Botón de búsqueda en mobile (abre modal simple o redirige a filtros) -->
+            <div class="d-inline-block d-lg-none ms-2">
+            <button type="button" class="btn header-item noti-icon waves-effect" id="geagroMobileFilterBtn">
+                <i class="mdi mdi-filter-variant"></i>
+            </button>
+            </div>
 
             <div class="dropdown d-inline-block d-lg-none ms-2">
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
@@ -142,9 +219,9 @@
                                 </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h6 class="mb-1">Alerta por lluvias</h6>
+                                    <h6 class="mb-1">Alerta y avisos</h6>
                                     <div class="text-muted">
-                                        <p class="mb-1">Alertas en el cuertal norte</p>
+                                        <p class="mb-1">Alertas heladas (48hs) Cuartel Norte</p>
                                     </div>
                                 </div>
                             </div>
