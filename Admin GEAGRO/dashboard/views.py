@@ -10,6 +10,10 @@ class DashboardView(LoginRequiredMixin,TemplateView):
 dashboard_view = DashboardView.as_view(template_name = "dashboard/index.html")
 calendar_view = DashboardView.as_view(template_name = "dashboard/calendar.html")
 
+weather_view = DashboardView.as_view(template_name = "dashboard/weather.html")
+alert_view = DashboardView.as_view(template_name = "dashboard/alert.html")
+wines_view = DashboardView.as_view(template_name = "dashboard/wines.html")
+
 # email
 email_inbox_view = DashboardView.as_view(template_name = "dashboard/email/email-inbox.html")
 email_compose_view = DashboardView.as_view(template_name = "dashboard/email/email-compose.html")
